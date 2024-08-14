@@ -1,6 +1,42 @@
 @page
 @model VistaAgregarModel
 @{
-    ViewData["Title"] = "Add page";
+    ViewData["Title"] = "Add User";
 }
 
+<h1>@ViewData["Title"]</h1>
+
+<form>
+    <div class="mb-3">
+        <label for="inputNombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="inputNombre" placeholder="Ingresa tu nombre">
+    </div>
+
+    <div class="mb-3">
+        <label for="inputApellido" class="form-label">Apellido</label>
+        <input type="text" class="form-control" id="inputApellido" placeholder="Ingresa tu apellido">
+    </div>
+
+    <div class="mb-3">
+        <label for="selectTipoDocumento" class="form-label">Tipo de Documento</label>
+        <select class="form-select" id="selectTipoDocumento">
+            <option value=""></option>
+            <option value="Cedula Ciudadania">Cedula Ciudadania</option>
+            <option value="Cedula Extranjeria">Cedula Extranjeria</option>
+            <option value="Pasaporte">Pasaporte</option>
+            <option value="Licencia de Conducir">Licencia de Conducir</option>
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label for="inputNumeroDocumento" class="form-label">Número de Documento</label>
+        <input type="text" class="form-control" id="inputNumeroDocumento" placeholder="Ingresa el número de documento">
+    </div>
+
+    <div class="mb-3">
+        <label for="inputDireccion" class="form-label">Dirección</label>
+        <input type="text" class="form-control" id="inputDireccion" placeholder="Ingresa tu dirección">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
