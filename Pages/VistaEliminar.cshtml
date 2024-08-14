@@ -1,11 +1,17 @@
 @page
 @model CrudsitoWeb.Pages.VistaEliminar
 @{
-    ViewData["Title"] = "VistaEliminar";
+    ViewData["Title"] = "Delete User";
 }
 
 <h1>@ViewData["Title"]</h1>
 
-<div>
-    
-</div>
+<p>En esta página vamos a eliminar un usuario existente.</p>
+
+<form asp-page="/Index" onsubmit="return confirm('¿Estás seguro de que deseas eliminar este usuario?');">
+    <div class="mb-3">
+        <label for="inputID" class="form-label">Ingresa el ID del usuario a eliminar</label>
+        <input type="number" class="form-control" id="inputID" placeholder="Ingresa el ID">
+    </div>
+    <button type="submit" class="btn btn-danger">Eliminar</button>
+</form>
